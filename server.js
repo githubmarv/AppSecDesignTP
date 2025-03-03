@@ -27,6 +27,15 @@ app.use(session({
   cookie: { secure: false }
 }))
 
+function endsWith(x,y) {
+	let index = x.lastIndexOf(y);
+	return x.lastIndexOf(y) === x.length - y.length;
+}
+
+
+
+
+
 // Initialize Passport
 app.use(passport.initialize())
 app.use(passport.session())
